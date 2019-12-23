@@ -4,17 +4,24 @@
 
 <script>
   $(document).ready( function () {
-    $('#sites').DataTable();
+    $('#sites').DataTable({
+      "paging":   false,
+      "ordering": false,
+      "info":     false
+    });
   } );
 </script>
 
-Hello World
-
 <table id="sites" class="display" style="width:100%">
+  <thead>
+    <tr>
+      <th>Projects and Blogs</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td>
-        <a href="https://kevingg.github.io/"> A diary study of Beam, Dataflow and correlation between crypto currency price and news</a>
+        <a href="https://kevingg.github.io/diary"> A diary study of Beam, Dataflow and correlation between crypto currency price and news</a>
       </td>
     </tr>
   </tbody>
