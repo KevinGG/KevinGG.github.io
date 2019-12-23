@@ -1,36 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-<style>
-  #search-box {
-    width: 100%;
-    clear: both;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  #search-box input {
-    width: 600px;
-    font-size: 20px;
-    padding: 5px;
-  }
-</style>
-<script>
-  $(document).ready( function () {
-    $('#sites').DataTable({
-      "searching": true, 
-      "paging": false,
-      "ordering": false,
-      "info": false,
-      initComplete : function() {
-        $("#sites_filter").detach().appendTo('#search-box');
-      }
-    });
-    $('a').attr('target','_blank');
-  } );
-</script>
-
 <body>
-  <div id="search-box"></div>
   <table id="sites" class="display" style="width:100%">
     <thead>
       <tr>
