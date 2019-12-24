@@ -33,9 +33,13 @@
           width: 600px;
           font-size: 20px;
           padding: 5px;
-        }
-        #search-box input[type="text"], textarea {
           background-color: #2f2f2f;
+          outline-color: #2f2f2f;
+          border-color: #2f2f2f;
+          border-radius: 25px;
+        }
+        #sites {
+          width: 100%;
         }
       </style>
       <script>
@@ -64,20 +68,22 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-			<table id="sites" class="display">
-			  <thead>
-			    <tr>
-			      <th>Projects and Blogs</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <td>
-			        <a href="https://kevingg.github.io/diary"> A diary study of Beam, Dataflow and correlation between crypto currency price and news</a>
-			      </td>
-			    </tr>
-			  </tbody>
-			</table>
+      <div>
+        <table id="sites">
+          <thead>
+          <tr>
+            <th>Projects and Blogs</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <a href="https://kevingg.github.io/diary"> A diary study of Beam, Dataflow and correlation between crypto currency price and news</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
       {{ content }}
 
