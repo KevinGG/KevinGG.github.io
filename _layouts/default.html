@@ -13,42 +13,45 @@
     {% endif %}
     <meta charset="UTF-8">
 
-		{% seo %}
+    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-		<style>
-		  #search-box {
-		    width: 100%;
-		    clear: both;
-		    padding-top: 20px;
-		    padding-bottom: 20px;
-		  }
-		  #search-box input {
-		    width: 600px;
-		    font-size: 20px;
-		    padding: 5px;
-		  }
-		</style>
-		<script>
-		  $(document).ready( function () {
-		    $('#sites').DataTable({
-		      "searching": true, 
-		      "paging": false,
-		      "ordering": false,
-		      "info": false,
-		      initComplete : function() {
-		        $("#sites_filter").detach().appendTo('#search-box');
-		      }
-		    });
-		    $('a').attr('target','_blank');
-		  } );
-		</script>
+      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+      <style>
+        #search-box {
+          width: 100%;
+          clear: both;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        #search-box input {
+          width: 600px;
+          font-size: 20px;
+          padding: 5px;
+        }
+        #search-box input[type="text"], textarea {
+          background-color: #2f2f2f;
+        }
+      </style>
+      <script>
+        $(document).ready( function () {
+          $('#sites').DataTable({
+            "searching": true,
+            "paging": false,
+            "ordering": false,
+            "info": false,
+            initComplete : function() {
+              $("#sites_filter").detach().appendTo('#search-box');
+            }
+          });
+          $('a').attr('target','_blank');
+        } );
+      </script>
 
 	</head>
 
@@ -61,7 +64,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-			<table id="sites" class="display" style="width:100%">
+			<table id="sites" class="display">
 			  <thead>
 			    <tr>
 			      <th>Projects and Blogs</th>
