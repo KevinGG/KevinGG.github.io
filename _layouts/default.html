@@ -34,12 +34,12 @@
           font-size: 20px;
           padding: 5px;
           background-color: #2f2f2f;
-          outline-color: #2f2f2f;
+          outline: none;
           border-color: #2f2f2f;
           border-radius: 25px;
         }
         #sites {
-          width: 100%;
+          width: 80%;
         }
       </style>
       <script>
@@ -47,7 +47,7 @@
           $('#sites').DataTable({
             "searching": true,
             "paging": false,
-            "ordering": false,
+            "ordering": true,
             "info": false,
             initComplete : function() {
               $("#sites_filter").detach().appendTo('#search-box');
@@ -67,23 +67,24 @@
       <div id="search-box"></div>
     </header>
 
+    <div style="width:140%">
+      <table id="sites">
+        <thead>
+        <tr>
+          <th>Projects and Blogs</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <a href="https://kevingg.github.io/diary"> A diary study of Beam, Dataflow and correlation between crypto currency price and news</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
     <main id="content" class="main-content" role="main">
-      <div>
-        <table id="sites">
-          <thead>
-          <tr>
-            <th>Projects and Blogs</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
-              <a href="https://kevingg.github.io/diary"> A diary study of Beam, Dataflow and correlation between crypto currency price and news</a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
 
       {{ content }}
 
